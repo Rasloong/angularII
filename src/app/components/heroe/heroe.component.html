@@ -1,5 +1,5 @@
-<h1>{{heroe.nombre}}
-    <small class="text-sm fs-6 ">{{heroe.aparicion}}</small>
+<h1>{{heroe.nombre | uppercase }}
+    <small class="text-sm fs-6 ">({{heroe.aparicion | date:'y-M'}})</small>
 </h1>
 <hr>
 <div class="row">

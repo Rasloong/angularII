@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Heroe } from '../../services/heroes.service';
 import { HeroesService } from '../../services/heroes.service';
 @Component({
@@ -14,12 +14,10 @@ export class HeroeComponent {
     private router: Router
   ) {
     this.ACTIVEROUTE.params.subscribe((params) => {
-      console.log(params['id']);
       this.heroe = this.HEROESSERVICE.getHeroe(params['id']);
-      console.log(this.heroe);
     });
   }
-  regresar(){
+  regresar() {
     this.router.navigate(['/heroes']);
   }
 }
