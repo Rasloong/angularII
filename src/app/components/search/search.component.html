@@ -9,13 +9,5 @@
     </div>
 </div>
 <div class="card-columns ">
-    <div class="card animated fadeIn " *ngFor="let heroe of heroes;let i=index ">
-        <img class="card-img-top img-fluid " [src]="heroe.img " [alt]="heroe.nombre ">
-        <div class="card-body ">
-            <h4 class="card-title ">{{ heroe.nombre }}</h4>
-            <p class="card-text ">{{ heroe.bio }}</p>
-            <p class="card-text "><small>{{ heroe.aparicion }}</small></p>
-            <button (click)="verHeroe(i) " type="button " class="btn btn-outline-primary btn-block ">Ver mas...</button>
-        </div>
-    </div>
+    <app-heroe-card (heroeSelect)="verHeroe($event)" [heroe]="hr" [idx]="hr.idx" *ngFor="let hr of heroes;"></app-heroe-card>
 </div>
